@@ -3,7 +3,10 @@ version: '2'
 services:
     node:
         build:
-          context: .
-          dockerfile: Dockerfile
+            context: .
+            dockerfile: Dockerfile
         ports:
             - "8888:80"
+        volumes:
+            - "./volumes/app:/app"
+        container_name: node
