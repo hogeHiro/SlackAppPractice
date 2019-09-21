@@ -10,3 +10,4 @@ services:
         volumes:
             - "./volumes/app:/app"
         container_name: node
+        env_file: secret.env
