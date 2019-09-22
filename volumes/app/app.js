@@ -11,10 +11,13 @@ const web = new WebClient(token);
 rtm.on('message', async (event) => {
   console.log(event);
   try {
-    // Send a welcome message to the same channel where the new member just joined, and mention the user.
-    // const reply = await rtm.sendMessage(`Welcome to the channel, <@${event.user}>`, event.channel)
-    // console.log('Message sent successfully', reply.ts);
 
+    if (event.subtype && event.subtype == 'bot_message') {
+      return
+    }
+    // Send a welcome message to the same channel where the new member just joined, and mention the user.
+    const reply = await rtm.sendMessage(`Welcome to the channel, <@${event.user}>`, event.channel)
+    console.log('Message sent successfully', reply.ts);
 
     const result = await web.chat.postMessage({
       blocks: [
