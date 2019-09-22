@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "@slack/rtm-api": "^5.0.2"
+    "@slack/rtm-api": "^5.0.2",
+    "@slack/web-api": "^5.1.0"
   },
   "devDependencies": {},
   "scripts": {
