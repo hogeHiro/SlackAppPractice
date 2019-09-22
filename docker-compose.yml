@@ -6,6 +6,6 @@ services:
             context: .
             dockerfile: Dockerfile
         volumes:
-            - "./volumes/app:/app"
+            - "./app:/app"
         container_name: node
         env_file: secret.env
