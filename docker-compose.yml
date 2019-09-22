@@ -5,8 +5,6 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        ports:
-            - "8888:80"
         volumes:
             - "./volumes/app:/app"
         container_name: node
