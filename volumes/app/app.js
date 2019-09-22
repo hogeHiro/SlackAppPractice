@@ -37,7 +37,8 @@ rtm.on('message', async (event) => {
           },
         },
       ],
-      channel: event.channel,
+      // channel: event.channel,
+      channel: 'UNLD7QQGG',
     });
     console.log('Message sent successfully', result.ts);
   } catch (error) {
